@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import StoreProvider from "@/lib/storeProvider";
+import SideBar from "./components/SideBar";
 
 export const metadata: Metadata = {
-  title: "NextJS BoilerPlate",
+  title: "Nextjs-app",
   description: "Plutus NextJS BoilerPlate for new NextJS projects",
 };
 
@@ -15,8 +16,15 @@ export default function RootLayout({
   return (
     <StoreProvider>
       <html lang="en">
-        <body className={``}>
-          {children}
+        <body>
+          <main className="size-screen flex flex-row gap-[15px]">
+            <SideBar />
+            <section className="h-screen flex-1 flex flex-col items-center">
+              <div className="size-full">
+                {children}
+              </div>
+            </section>
+          </main>
         </body>
       </html>
     </StoreProvider>

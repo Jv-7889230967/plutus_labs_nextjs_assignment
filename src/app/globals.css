@@ -14,14 +14,40 @@
   }
 }
 
-body {
+/* body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+@layer components {
+
+  .link-button {
+    @apply h-[56px] w-[74%] bg-[#D9D9D9] text-center rounded-[24px] cursor-pointer flex items-center justify-center space-x-[4px];
+  }
+  
+  .link-button span {
+    @apply inline-block;
+  }
+  
+  .link-button .icon {
+    @apply flex items-center;
+  }
+  
+  .link-button .text {
+    @apply flex items-center text-black font-semibold;
+  }
+  .home-data-tab
+  {
+    @apply h-full w-[50%] bg-[#F6F7F5] flex flex-col gap-[10px] items-center justify-center rounded-[12px];
+  }
+  .stats-container
+  {
+    @apply h-[270px] min-h-fit w-[90%] flex flex-row border-2 border-solid border-black;
   }
 }
