@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import featureReducer from './featureSlice'; // Import your slice
+import dropdownReducer from './dropdownSlice';
 
 const store = configureStore({
   reducer: {
     yourSlice: featureReducer, // Add your slice reducer here
+    dropdown: dropdownReducer,
   },
 });
 
